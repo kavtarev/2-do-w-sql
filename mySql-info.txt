@@ -1,0 +1,62 @@
+show databases; to show all databases
+
+create database 'your name'; to create new one
+
+drop database 'your name'; to delete one
+
+use 'your name'; to enter database
+
+show tables; to show tables
+
+select database(); to find in which one you are currently
+
+---      ---      ---      ---      ---      ---      ---      ---      ---      ---      ---      ---      
+
+create table 'your name' (
+    id int primary key auto_increment,
+    surname varchar(255) not null
+);
+
+show columns from 'table name';
+
+create table lesson (
+    id int auto_increment primary key,
+    name varchar(255) not null,
+    teacher_id int not null,
+    FOREIGN KEY (teacher_id) references teacher(id)  (!) TO connect with other table
+);
+
+---      ---      ---      ---      ---      ---      ---      ---      ---      ---      ---      ---   
+
+insert into 'table name' (column) values ('new data'), ('new data'), ('new data'); 
+
+select * from 'table name';
+
+select id, surname, surname from teacher;
+
+select distinct 'field' from 'table name';
+
+select * from teacher WHERE id = 1;                 search with conditions
+                            surname = "name";
+                            id = 1 AND age = 2;
+                            id = 1 OR age = 2;
+                            NOT id = 1;
+                            age BETWEEN 23 AND 44;
+
+
+select * from teacher limit 2;                      limit
+
+select * from teacher ORDER BY 'field' desc;        ORDER
+
+ALTER table 'table name' ADD age int;
+
+UPDATE 'table name' SET 'field' WHERE id = 1;       UPDATE
+UPDATE 'table name' SET age = age + 1;              UPDATE with values
+
+select * from teacher WHERE surname LIKE '%v';      % - any number of symbols
+
+DELETE from teacher WHERE id = 3;
+
+
+
+
