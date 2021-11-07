@@ -50,13 +50,34 @@ select * from teacher ORDER BY 'field' desc;        ORDER
 
 ALTER table 'table name' ADD age int;
 
-UPDATE 'table name' SET 'field' WHERE id = 1;       UPDATE
+UPDATE 'table name' SET 'field' = 'value' WHERE id = 1;       UPDATE
 UPDATE 'table name' SET age = age + 1;              UPDATE with values
 
 select * from teacher WHERE surname LIKE '%v';      % - any number of symbols
 
 DELETE from teacher WHERE id = 3;
 
+---      ---      ---      ---      ---      ---      ---      ---      ---      ---      ---      --- 
+
+select teacher.surname, lesson name
+    from teacher
+    (left outer || right outer || inner) join lesson
+    on teacher.id = lesson.teacher_id;              OBTAIN data from both tables;
+
+
+---      ---      ---      ---      ---      ---      ---      ---      ---      ---      ---      --- 
+
+select MAX(age) from teacher;
+select MIN(age) from teacher;
+select AVG(age) from teacher;
+select age, COUNT(age) from teacher GROUP BY age; 
+
+---      ---      ---      ---      ---      ---      ---      ---      ---      ---      ---      --- 
+
+нормальные формы
+
+1 одно поле одно значение
+2 всегда есть id
 
 
 
