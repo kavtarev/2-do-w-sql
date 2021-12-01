@@ -6,7 +6,7 @@ drop database 'your name'; to delete one
 
 use 'your name'; to enter database
 
-show tables; to show tables
+show tables; to show tables;
 
 select database(); to find in which one you are currently
 
